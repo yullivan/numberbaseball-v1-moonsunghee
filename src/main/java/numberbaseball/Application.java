@@ -17,7 +17,7 @@ public class Application {
         int count = 0;
         boolean isCorrect = false;
 
-        System.out.println(randomNumber);
+        //System.out.println(randomNumber);
 
         while (!isCorrect) {
             // 사용자 입력 받기 (이 부분은 완성되어 있음)
@@ -62,7 +62,7 @@ public class Application {
         return numbers.subList(0, 3); // 앞에서부터 3개만 선택
     }
 
-    //결과계산
+    //스트라이크|볼 결과계산
     private static int[] calculateResult(List<Integer> computerNumbers, List<Integer> userNumbers) {
         int strikes = 0;
         int balls = 0;
