@@ -15,10 +15,11 @@ public class Application {
 
         Scanner scanner = new Scanner(System.in);
         int count = 0;
+        boolean isCorrect = false;
 
         System.out.println(randomNumber);
 
-        while (true) {
+        while (!isCorrect) {
             // 사용자 입력 받기 (이 부분은 완성되어 있음)
             System.out.print("\n첫 번째 숫자를 입력하세요: ");
             int user1 = scanner.nextInt();
@@ -31,11 +32,12 @@ public class Application {
             inputNumber.add(user2);
             inputNumber.add(user3);
             System.out.println(inputNumber);
-            // TODO: strike 개수를 계산하세요
             count++;
 
-            // TODO: 결과를 출력하세요 (예: "1 스트라이크")
+            // TODO: strike 개수를 계산하세요
             int[] result = calculateResult(randomNumber, inputNumber);
+
+            // TODO: 결과를 출력하세요 (예: "1 스트라이크")
             int strikes = result[0];
             int balls = result[1];
 
@@ -45,12 +47,9 @@ public class Application {
             if (strikes == 3) {
                 System.out.println("축하합니다! 정답을 맞췄습니다.");
                 System.out.println("총 시도 횟수: " + count);
-                break;
+                isCorrect = true;
             }
-
         }
-
-        // System.out.println("축하합니다! 정답을 맞추셨습니다.");
     }
 
     //랜덤넘버생성
